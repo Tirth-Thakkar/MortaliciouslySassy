@@ -27,3 +27,105 @@
   background: #009494;
   color: black;
 }
+
+/* class to create the calculator's container; uses CSS grid dsiplay to partition off buttons */
+.calculator-container { 
+  width: 90vw; /* this width and height is specified for mobile devices by default */
+  height: 80vh;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* fr is a special unit; learn more here: https://css-tricks.com/introduction-fr-css-unit/  */
+  grid-template-rows: 0.5fr repeat(4, 1fr);
+  gap: 10px 10px;
+}
+
+@media (min-width: 600px) { 
+  .calculator-container {
+      width: 40vw;
+      height: 80vh;
+  }
+}
+
+/* styling for the calculator buttons themselves */
+.calculator-button {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  background-color: #21807c;
+  border: 3px solid black;
+  font-size: 1.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* grid display allows programmer to specify how much of the grid an element should take up; these buttons will take up 1 row and 1 column */
+  grid-column: span 1;
+  grid-row: span 1;
+
+  /* allows for smooth transition of properties and the "animation" effect to appear on hover */
+  transition: all 0.5s; 
+}
+
+/* styling for the calculator clear button */
+.calculator-button-clear {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  background-color: #e68b1c;
+  border: 3px solid black;
+  font-size: 1.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* grid display allows programmer to specify how much of the grid an element should take up; these buttons will take up 1 row and 1 column */
+  grid-column: span 1;
+  grid-row: span 1;
+
+  /* allows for smooth transition of properties and the "animation" effect to appear on hover */
+  transition: all 0.5s; 
+}
+
+/* styling for the calculator equals button */
+.calculator-button-equals {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  background-color: #ff0000;
+  border: 3px solid black;
+  font-size: 1.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* grid display allows programmer to specify how much of the grid an element should take up; these buttons will take up 1 row and 1 column */
+  grid-column: span 1;
+  grid-row: span 1;
+
+  /* allows for smooth transition of properties and the "animation" effect to appear on hover */
+  transition: all 0.5s; 
+}
+
+/* darkens the background color on hover to create a selecting effect */
+.calculator-button:hover {
+  background-color: #373737;
+}
+
+/* styling for the top bar which shows the results of the calculator */
+.calculator-output {
+  /* note how the output instead takes up 4 columns and 1 row; essentially takes up the entirety of the first row */
+  grid-column: span 4;
+  grid-row: span 1;
+
+  border-radius: 10px;
+  padding: 1em;
+  font-size: auto;
+  border: 5px solid black;
+
+  display: flex;
+  align-items: center;
+}
