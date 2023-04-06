@@ -7,24 +7,24 @@
     <!--result-->
     <div class="calculator-output" id="output">0</div>
     <!--row 1-->
-    <div class="calculator-button" onclick="number('1')">1</div>
-    <div class="calculator-button" onclick="number('2')">2</div>
-    <div class="calculator-button" onclick="number('3')">3</div>
-    <div class="calculator-button" onclick="operation('+')">+</div>
+    <div class="button" onclick="number('1')">1</div>
+    <div class="button" onclick="number('2')">2</div>
+    <div class="button" onclick="number('3')">3</div>
+    <div class="button" onclick="operation('+')">+</div>
     <!--row 2-->
-    <div class="calculator-button" onclick="number('4')">4</div>
-    <div class="calculator-button" onclick="number('5')">5</div>
-    <div class="calculator-button" onclick="number('6')">6</div>
-    <div class="calculator-button" onclick="operation('-')">-</div>
+    <div class="button" onclick="number('4')">4</div>
+    <div class="button" onclick="number('5')">5</div>
+    <div class="button" onclick="number('6')">6</div>
+    <div class="button" onclick="operation('-')">-</div>
     <!--row 3-->
-    <div class="calculator-button" onclick="number('7')">7</div>
-    <div class="calculator-button" onclick="number('8')">8</div>
-    <div class="calculator-button" onclick="number('9')">9</div>
-    <div class="calculator-button" onclick="operation('*')">*</div>
+    <div class="button" onclick="number('7')">7</div>
+    <div class="button" onclick="number('8')">8</div>
+    <div class="button" onclick="number('9')">9</div>
+    <div class="button" onclick="operation('*')">*</div>
     <!--row 4-->
     <div class="calculator-button-clear" onclick="clearCalc()">A/C</div>
-    <div class="calculator-button" onclick="number('0')">0</div>
-    <div class="calculator-button" onclick="number('.')">.</div>
+    <div class="button" onclick="number('0')">0</div>
+    <div class="button" onclick="number('.')">.</div>
     <div class="calculator-button-equals" onclick="equals()">=</div>
 </div>
 

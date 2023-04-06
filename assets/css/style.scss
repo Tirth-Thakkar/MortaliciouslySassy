@@ -49,7 +49,7 @@
 }
 
 /* styling for the calculator buttons themselves */
-.calculator-button {
+.button {
   width: auto;
   height: auto;
   border-radius: 10px;
@@ -112,7 +112,7 @@
 }
 
 /* darkens the background color on hover to create a selecting effect */
-.calculator-button:hover {
+.button:hover {
   background-color: #373737;
 }
 
@@ -137,4 +137,19 @@
 
   display: flex;
   align-items: center;
+}
+
+// STOPWATCH SASS
+.stopwatch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timer {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.stopwatch-buttons {
+  display: flex;
+  flex-direction: row;
 }

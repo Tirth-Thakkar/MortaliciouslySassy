@@ -1,35 +1,11 @@
 <html>
 <head>
 	<title>Stopwatch</title>
-	<style>
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-		.timer {
-			font-size: 5rem;
-			margin-bottom: 2rem;
-		}
-		.buttons {
-			display: flex;
-			flex-direction: row;
-		}
-		.button {
-			font-size: 1.5rem;
-			margin: 0 0.5rem;
-			padding: 0.5rem 1rem;
-			border-radius: 0.5rem;
-			background-color: #007bff;
-			color: #fff;
-			cursor: pointer;
-		}
-	</style>
 </head>
 <body>
-	<div class="container">
+	<div class="stopwatch-container">
 		<div class="timer">00:00:00</div>
-		<div class="buttons">
+		<div class="stopwatch-buttons">
 			<button id="startButton" class="button">Start</button>
 			<button id="stopButton" class="button">Stop</button>
 			<button id="resetButton" class="button">Reset</button>
