@@ -3,6 +3,26 @@
 
 @import "{{ site.theme }}";
 
+@mixin button {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  background-color: #21807c;
+  border: 3px solid black;
+  font-size: 1.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* grid display allows programmer to specify how much of the grid an element should take up; these buttons will take up 1 row and 1 column */
+  grid-column: span 1;
+  grid-row: span 1;
+
+  /* allows for smooth transition of properties and the "animation" effect to appear on hover */
+  transition: all 0.5s; 
+}
+
 /* "row style" is flexible size and aligns pictures in center */
 .row {
     align-items: center;
@@ -50,23 +70,7 @@
 
 /* styling for the calculator buttons themselves */
 .button {
-  width: auto;
-  height: auto;
-  border-radius: 10px;
-  background-color: #21807c;
-  border: 3px solid black;
-  font-size: 1.5em;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* grid display allows programmer to specify how much of the grid an element should take up; these buttons will take up 1 row and 1 column */
-  grid-column: span 1;
-  grid-row: span 1;
-
-  /* allows for smooth transition of properties and the "animation" effect to appear on hover */
-  transition: all 0.5s; 
+  @include button;
 }
 
 /* styling for the calculator clear button */

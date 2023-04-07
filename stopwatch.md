@@ -1,7 +1,5 @@
+# Stopwatch
 <html>
-<head>
-	<title>Stopwatch</title>
-</head>
 <body>
 	<div class="stopwatch-container">
 		<div class="timer">00:00:00</div>
