@@ -2,7 +2,7 @@
 <html>
 <body>
 	<div class="stopwatch-container">
-		<div class="timer">00:00:00</div>
+		<div class="timer">00:00:00.000</div>
 		<div class="stopwatch-buttons">
 			<button id="startButton" class="button">Start</button>
 			<button id="stopButton" class="button">Stop</button>
