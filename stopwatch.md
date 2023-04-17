@@ -44,7 +44,7 @@
 			stopButton.disabled = true;
 			resetButton.disabled = true;
 			clearInterval(timerInterval);
-			elapsedTime = 0;
+			startTime=new Date().getTime()
 			updateTimer();
 		}
 		startButton.addEventListener("click", startTimer);
