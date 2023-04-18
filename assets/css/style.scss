@@ -15,11 +15,10 @@
   justify-content: center;
   align-items: center;
 
-  /* grid display allows programmer to specify how much of the grid an element should take up; these buttons will take up 1 row and 1 column */
   grid-column: span 1;
   grid-row: span 1;
 
-  /* allows for smooth transition of properties and the "animation" effect to appear on hover */
+  // Creates smooth animation effect
   transition: all 0.5s; 
 }
 
