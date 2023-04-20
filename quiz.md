@@ -2,34 +2,52 @@
 <title>Pop Quiz on Sass</title>
 <style>
     .FRQ{
-        background-color: #3618c9;
+        /* background-color: #3618c9; */
+        text-align: center;
+    }
+    .inputtext{
+        text-align: center;
+        border-width: 3px;
+        border-style: solid;
+        border-color: #000000;
+        border-radius: 10px;
     }
 </style>
 <form action="javascript:create_user()">
-    <p><label class="FRQ">
+    <p class="FRQ"><label>
         Input your username(does not have to be your real name):
-        <input type="text" name="username" id="username" placeholder="Input username here" required>
+        <br>
+        <br>
+        <input class="inputtext" type="text" name="username" id="username" placeholder="Input username here" required>
     </label></p>
     <!-- Dummy questions. Change questions to Sass related later on. -->
-    <p><label class="FRQ">
+    <p class="FRQ"><label>
         Question 1: What is your favorite food?
-        <input type="text" name="question1" id="question1" required>
+        <br>
+        <br>
+        <input class="inputtext" type="text" name="question1" id="question1" placeholder="Input answer here" required>
     </label></p>
-    <p><label class="FRQ">
+    <p class="FRQ"><label>
         Question 2: What is your favorite game?
-        <input type="text" name="question2" id="question2" required>
+        <br>
+        <br>
+        <input class="inputtext" type="text" name="question2" id="question2" placeholder="Input answer here" required>
     </label></p>
-    <p><label class="FRQ">
+    <p class="FRQ"><label>
         Question 3: How many APs are you taking?
-        <input type="text" name="question3" id="question3" required>
+        <br>
+        <br>
+        <input class="inputtext" type="text" name="question3" id="question3" placeholder="Input answer here" required>
     </label></p>
-    <p><label class="FRQ">
+    <p class="FRQ"><label>
         Question 4: What is your hobby?
-        <input type="text" name="question4" id="question4" required>
+        <br>
+        <br>
+        <input class="inputtext" type="text" name="question4" id="question4" placeholder="Input answer here" required>
     </label></p>
     <p>
     <!-- Popup message on button click -->
-        <button onclick="alert('Your answer have been posted!')" class="button">Submit</button>
+        <button onclick="alert('Your answer have been posted!')" class="form-button">Submit</button>
     </p>
 </form>
 

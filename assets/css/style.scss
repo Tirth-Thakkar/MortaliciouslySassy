@@ -72,6 +72,10 @@
   @include button;
 }
 
+.form-button{
+  @include button;
+}
+
 /* styling for the calculator clear button */
 .calculator-button-clear {
   @extend .button;
