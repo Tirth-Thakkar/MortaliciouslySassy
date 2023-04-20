@@ -1,6 +1,7 @@
 <html>
 <h1>Pop Quiz on Sass</h1>
 <h3>This is one of your assignments for the hacks</h3>
+<p id="restart-request">Refresh the page to take the quiz again!</p>
 <style>
     .FRQ{
         /* background-color: #3618c9; */
@@ -14,7 +15,7 @@
         border-radius: 10px;
     }
 </style>
-<form action="javascript:create_user()">
+<form id="Sassquiz" action="javascript:create_user()">
     <p class="FRQ"><label>
         Input your username(does not have to be your real name):
         <br>
@@ -53,6 +54,9 @@
 </form>
 
 <script>
+    document.getElementById("Sassquiz").style.display= "block";
+    document.getElementById("restart-request").style.display= "none";
+
     const urlSass = "http://206.188.196.247:8086/api/sass";
     const createSass_fetch = urlSass + '/addSass';
     // Load users on page entry
@@ -90,6 +94,8 @@
                 console.log(data);
             })
         })
+        document.getElementById("Sassquiz").style.display= "none";
+        document.getElementById("restart-request").style.display= "block";
         }
 </script>
 </html>
