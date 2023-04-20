@@ -1,5 +1,6 @@
 <html>
-<title>Pop Quiz on Sass</title>
+<h1>Pop Quiz on Sass</h1>
+<h3>This is one of your assignments for the hacks</h3>
 <style>
     .FRQ{
         /* background-color: #3618c9; */
@@ -52,18 +53,16 @@
 </form>
 
 <script>
-    const urlGame = "https://pythonalflask.tk/api/score";
-    const createGame_fetch = urlGame + '/addScore';
-    const urlRating = "https://pythonalflask.tk/api/rating";
-    const createRating_fetch = urlRating + '/createRating'; 
+    const urlSass = "http://206.188.196.247:8086/api/sass";
+    const createSass_fetch = urlSass + '/addSass';
     // Load users on page entry
     function create_user(){
-        // Fix spam button issue
-        // showScreen(SCREEN_DEFAULT);
-        // Get the data
         const body = {
             username: document.getElementById("username").value,
-            rating: document.getElementById("score").innerHTML
+            response1: document.getElementById("question1").value,
+            response2: document.getElementById("question2").value,
+            response3: document.getElementById("question3").value,
+            response4: document.getElementById("question4").value
         };
         const requestOptions = {
             method: 'POST',
@@ -78,7 +77,7 @@
         };
         // URL for Create API
         // Fetch API call to the database to create a new user
-        fetch(createGame_fetch, requestOptions)
+        fetch(createSass_fetch, requestOptions)
         .then(response => {
             // trap error response from Web API
             if (response.status !== 200) {
