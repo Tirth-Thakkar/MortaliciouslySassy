@@ -1,55 +1,76 @@
 <html>
-<title>Pop Quiz on Sass</title>
+<h1>Pop Quiz on Sass</h1>
+<h3>This is one of your assignments for the hacks</h3>
+<p id="restart-request">Refresh the page to take the quiz again!</p>
 <style>
     .FRQ{
-        background-color: #3618c9;
+        /* background-color: #3618c9; */
+        text-align: center;
+    }
+    .inputtext{
+        text-align: center;
+        border-width: 3px;
+        border-style: solid;
+        border-color: #000000;
+        border-radius: 10px;
     }
     .button{
         background-color: #3618c9;
     }
     
 </style>
-<form action="javascript:create_user()">
-    <p><label class="FRQ">
+<form id="Sassquiz" action="javascript:create_user()">
+    <p class="FRQ"><label>
         Input your username(does not have to be your real name):
-        <input type="text" name="username" id="username" placeholder="Input username here" required>
+        <br>
+        <br>
+        <input class="inputtext" type="text" name="username" id="username" placeholder="Input username here" required>
     </label></p>
     <!-- Dummy questions. Change questions to Sass related later on. -->
-    <p><label class="FRQ">
+    <p class="FRQ"><label>
         Question 1: What is your favorite food?
-        <input type="text" name="question1" id="question1" required>
+        <br>
+        <br>
+        <input class="inputtext" type="text" name="question1" id="question1" placeholder="Input answer here" required>
     </label></p>
-    <p><label class="FRQ">
+    <p class="FRQ"><label>
         Question 2: What is your favorite game?
-        <input type="text" name="question2" id="question2" required>
+        <br>
+        <br>
+        <input class="inputtext" type="text" name="question2" id="question2" placeholder="Input answer here" required>
     </label></p>
-    <p><label class="FRQ">
+    <p class="FRQ"><label>
         Question 3: How many APs are you taking?
-        <input type="text" name="question3" id="question3" required>
+        <br>
+        <br>
+        <input class="inputtext" type="text" name="question3" id="question3" placeholder="Input answer here" required>
     </label></p>
-    <p><label class="FRQ">
+    <p class="FRQ"><label>
         Question 4: What is your hobby?
-        <input type="text" name="question4" id="question4" required>
+        <br>
+        <br>
+        <input class="inputtext" type="text" name="question4" id="question4" placeholder="Input answer here" required>
     </label></p>
     <p>
     <!-- Popup message on button click -->
-        <button onclick="alert('Your answer have been posted!')" class="button">Submit</button>
+        <button onclick="alert('Your answer have been posted!')" class="form-button">Submit</button>
     </p>
 </form>
 
 <script>
-    const urlGame = "https://pythonalflask.tk/api/score";
-    const createGame_fetch = urlGame + '/addScore';
-    const urlRating = "https://pythonalflask.tk/api/rating";
-    const createRating_fetch = urlRating + '/createRating'; 
+    document.getElementById("Sassquiz").style.display= "block";
+    document.getElementById("restart-request").style.display= "none";
+
+    const urlSass = "http://206.188.196.247:8086/api/sass";
+    const createSass_fetch = urlSass + '/addSass';
     // Load users on page entry
     function create_user(){
-        // Fix spam button issue
-        // showScreen(SCREEN_DEFAULT);
-        // Get the data
         const body = {
             username: document.getElementById("username").value,
-            rating: document.getElementById("score").innerHTML
+            response1: document.getElementById("question1").value,
+            response2: document.getElementById("question2").value,
+            response3: document.getElementById("question3").value,
+            response4: document.getElementById("question4").value
         };
         const requestOptions = {
             method: 'POST',
@@ -64,7 +85,7 @@
         };
         // URL for Create API
         // Fetch API call to the database to create a new user
-        fetch(createGame_fetch, requestOptions)
+        fetch(createSass_fetch, requestOptions)
         .then(response => {
             // trap error response from Web API
             if (response.status !== 200) {
@@ -77,6 +98,8 @@
                 console.log(data);
             })
         })
+        document.getElementById("Sassquiz").style.display= "none";
+        document.getElementById("restart-request").style.display= "block";
         }
 </script>
 </html>
