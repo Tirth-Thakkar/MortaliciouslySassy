@@ -4,6 +4,10 @@
     .FRQ{
         background-color: #3618c9;
     }
+    .button{
+        background-color: #3618c9;
+    }
+    
 </style>
 <form action="javascript:create_user()">
     <p><label class="FRQ">
