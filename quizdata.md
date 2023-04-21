@@ -16,7 +16,8 @@
  // prepare HTML result container for new output
   const resultContainer = document.getElementById("quizList");
   // prepare URL's to allow easy switch from deployment and localhost
-  const url = "http://192.168.37.91:8086/api/sass";
+//   const url = "http://192.168.37.91:8086/api/sass";
+    const url = "http://206.188.196.247:8086/api/sass";
   const read_fetch = url + '/sassList';
 
   // Load users on page entry
