@@ -55,10 +55,7 @@
         // valid response will have json data
       response.json().then(data => {
           console.log(data);
-          data.sort(function(a, b) {
-            return b.score - a.score;
-          });
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < data.length; i++) {
           const row = data[i];
           console.log(row);
           add_row(row);
@@ -79,8 +76,11 @@
   function add_row(data) {
     const tr = document.createElement("tr");
     const username = document.createElement("td");
-    const score = document.createElement("td");
-    const dos = document.createElement("td");
+    const question1 = document.createElement("td");
+    const question2 = document.createElement("td");
+    const question3 = document.createElement("td");
+    const question4 = document.createElement("td");
+    const doquestion = document.createElement("td");
   
     // obtain data that is specific to the API
     username.innerHTML = data.username; 
