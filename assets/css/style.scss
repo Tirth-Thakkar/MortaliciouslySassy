@@ -27,15 +27,15 @@
   @return $sum;
 }
 
-@function max($nums){
-  $i:0;
-  $value:0px;
-  @while $i<length($nums){
-    @if $value<list.nth($nums,$i){
-      $value:list.nth($nums,$i);
-    }
-  }
-}
+// @function max($nums){
+//   $i:0;
+//   $value:0px;
+//   @while $i<length($nums){
+//     @if $value<list.nth($nums,$i){
+//       $value:list.nth($nums,$i);
+//     }
+//   }
+// }
 
 #testing {
   font-size: factorial(3);
