@@ -16,7 +16,7 @@
   @each $num in $numList {
     $sum: $sum+$num;
   }
-  @return $sum;
+  @return $num;
 }
 
 @function tri($num){
