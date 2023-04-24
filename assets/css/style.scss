@@ -19,6 +19,14 @@
   @return $sum;
 }
 
+@function tri($num){
+  $sum: 0;
+  @for $i from 1 through $num {
+    $sum: $sum+$num;
+  }
+  @return $sum;
+}
+
 @function triple($number){
   $counter: 0;
   @while $number > $counter{
