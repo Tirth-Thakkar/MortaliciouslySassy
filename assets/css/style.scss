@@ -11,21 +11,21 @@
   @return $calculated;
 }
 
-@function sum($numList){
-  $sum: 0;
-  @each $num in $numList {
-    $sum: $sum+$num;
-  }
-  @return $num;
-}
+// @function sum($numList){
+//   $sum: 0;
+//   @each $num in $numList {
+//     $sum: $sum+$num;
+//   }
+//   @return $num;
+// }
 
-@function tri($num){
-  $sum: 0;
-  @for $i from 1 through $num {
-    $sum: $sum+$num;
-  }
-  @return $sum;
-}
+// @function tri($num){
+//   $sum: 0;
+//   @for $i from 1 through $num {
+//     $sum: $sum+$num;
+//   }
+//   @return $sum;
+// }
 
 // @function max($nums){
 //   $i:0;
@@ -45,10 +45,10 @@
   content: " some" + " more" + " text";
 }
 
-#list_example{
-  $numslist: 40px, 50px, 80px;
-  font-size: max($numslist);
-}
+// #list_example{
+//   $numslist: 40px, 50px, 80px;
+//   font-size: max($numslist);
+// }
 
 @mixin button {
   width: auto;
