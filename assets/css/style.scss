@@ -11,6 +11,13 @@
   @return $calculated;
 }
 
+@function triple($number){
+  $counter: 0;
+  @while $number > $counter{
+    $number: 
+  }
+}
+
 #testing {
   font-size: factorial(3);
 }
