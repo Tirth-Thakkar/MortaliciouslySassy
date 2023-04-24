@@ -42,6 +42,14 @@
   content: " some" + " more" + " text";
 }
 
+#list_example{
+  $nums: 40px, 50px, 80px;
+  $i:0;
+  @while $i<length($nums){
+    font-size: list.nth($nums,$i);
+  }
+}
+
 @mixin button {
   width: auto;
   height: auto;
