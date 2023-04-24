@@ -27,10 +27,13 @@
   @return $sum;
 }
 
-@function triple($number){
-  $counter: 0;
-  @while $number > $counter{
-    $number: 
+@function max($nums){
+  $i:0;
+  $value:0px;
+  @while $i<length($nums){
+    @if $value<list.nth($nums,$i){
+      $value:list.nth($nums,$i);
+    }
   }
 }
 
@@ -43,14 +46,8 @@
 }
 
 #list_example{
-  $nums: 40px, 50px, 80px;
-  $i:0;
-  $value:0px;
-  @while $i<length($nums){
-    @if $value<list.nth($nums,$i){
-      $value:list.nth($nums,$i);
-    }
-  }
+  $numslist: 40px, 50px, 80px;
+  font-size: max($numslist);
 }
 
 @mixin button {
