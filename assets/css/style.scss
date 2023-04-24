@@ -11,6 +11,14 @@
   @return $calculated;
 }
 
+@function sum($numList){
+  $sum: 0;
+  @each $num in $numList {
+    $sum: $sum+$num;
+  }
+  @return $sum;
+}
+
 @function triple($number){
   $counter: 0;
   @while $number > $counter{
