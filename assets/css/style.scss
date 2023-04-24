@@ -45,8 +45,11 @@
 #list_example{
   $nums: 40px, 50px, 80px;
   $i:0;
+  $value:0px;
   @while $i<length($nums){
-    font-size: list.nth($nums,$i);
+    @if $value<list.nth($nums,$i){
+      $value:list.nth($nums,$i);
+    }
   }
 }
 
