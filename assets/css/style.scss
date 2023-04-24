@@ -3,6 +3,22 @@
 
 @import "{{ site.theme }}";
 
+@function factorial($number){
+  $calculated: 1;
+  @for $_ from 1 through $number {
+    $calculated: $calculated*$number;
+  }
+  @return $calculated;
+}
+
+#testing {
+  font-size: factorial(3);
+}
+
+#testing:after{
+  content: " some" + " more" + " text";
+}
+
 @mixin button {
   width: auto;
   height: auto;

@@ -1,7 +1,11 @@
 # Sass Frontend Lesson
+
+## This is the line of text being changed using different methods:
+<p id="testing">original text and</p>
+
 Welcome to our guide for Sass!
 
-![]({{site.baseurl}}/images/sassLogo.png)
+<!-- ![]({{site.baseurl}}/images/sassLogo.png) -->
 
 ## Examples:
 
